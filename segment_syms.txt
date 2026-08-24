@@ -1,0 +1,2 @@
+D_CBE40_start = 0xCBE40;
+D_CBE40_end = 0x113F50;

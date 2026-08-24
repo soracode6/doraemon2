@@ -13,6 +13,13 @@ typedef struct D_8011C1C8_struct {
 
 extern D_8011C1C8_struct D_8011C1C8;
 
+typedef struct D_80117AC8_struct{
+    s16 unk0;
+    s16 unk2;
+}D_80117AC8_struct;
+
+extern D_80117AC8_struct D_80117AC8;
+
 #define D_8011C1C8_sets(arg0, arg1, arg2) D_8011C1C8.unk0 = (arg0);D_8011C1C8.unkC = (arg1);D_8011C1C8.unk4 = (arg2)
 
 #endif

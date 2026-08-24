@@ -9,6 +9,21 @@ bootproc = 0x80025C50;
 
 idle_thread = 0x8011A4E0;
 
+// 11B0.c
+
+func_80025DB0 = 0x80025DB0;
+func_80025E30 = 0x80025E30;
+printFaultData = 0x80025EA0;
+printRegister = 0x800263DC;
+faultproc = 0x80026490;
+
+causeDesc = 0x800D9DC0;
+srDesc = 0x800D9F10;
+fpcsrDesc = 0x800DA084;
+
+
+//
+
 // 43F0.c
 
 func_80029B30 = 0x80029B30;
@@ -16,6 +31,18 @@ srand = 0x80029C30;
 rand = 0x80029C3C;
 
 next = 0x800F0A90;
+
+//
+
+// 5070.c
+
+cmPrintDriver = 0x8002A5A4;
+
+//
+
+// 6EE0.c
+
+romCopy = 0x8002C2F0;
 
 //
 
@@ -43,6 +70,12 @@ osRecvMesg = 0x800BE6B0;
 
 //
 
+// seteventmesg.c
+
+osSetEventMesg = 0x800BE910;
+
+//
+
 // setthreadpri.c
 
 osSetThreadPri = 0x800BE970;
@@ -55,8 +88,36 @@ osStartThread = 0x800BEA40;
 
 //
 
+// getcurrfaultthread.c
+
+__osGetCurrFaultedThread = 0x800BEF00;
+
+//
+
+// sprintf.c
+
+sprintf = 0x800C4EE0;
+
+//
+
+// syncprint.c
+
+osSyncPrintf = 0x800C4F70;
+
+//
+
+// pimgr.c
+
+osCreatePiManager = 0x800C7280;
+
+//
+
 // initialize.c
 
 osInitialize = 0x800C85F0;
 
 //
+
+piMesgQueue = 0x8011B470;
+piMsg = 0x800FC480;
+faultMsgQ = 0x8010B230;

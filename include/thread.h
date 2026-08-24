@@ -4,8 +4,8 @@
 #include "ultra64.h"
 
 #define THREAD_ID_IDLE 0
-#define THREAD_ID_20 20
-#define THREAD_PRIORITY_125 125
+#define THREAD_ID_FAULT 20
+#define THREAD_PRIORITY_FAULT 125
 
 typedef struct ThreadInfo {
     s32 thread_id;

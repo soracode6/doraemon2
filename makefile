@@ -97,7 +97,7 @@ DEFINES := -D_LANGUAGE_C -D_FINALROM -DNDEBUG -DTARGET_N64 -D_MIPS_SZLONG=32
 C_FLAGS += -nostdinc -fno-PIC -G 0 -mgp32 -mfp32 -Wa,--force-n64align -fno-asm -fno-common
 C_FLAGS += $(DEFINES) $(INCLUDE_CFLAGS)
 
-LD_FLAGS   = -T $(LDSCRIPT) -T undefined_funcs_auto.txt  -T undefined_syms_auto.txt
+LD_FLAGS   = -T $(LDSCRIPT) -T undefined_funcs_auto.txt  -T undefined_syms_auto.txt -T segment_syms.txt
 LD_FLAGS  += -Map $(ROM).map --no-check-sections
 
 $(BUILD_DIR)/src/libultra/os/%.o: OPT_FLAGS := -mips2 -O1

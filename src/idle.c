@@ -7,7 +7,7 @@
 extern OSThread D_8011A690;
 extern OSThread D_80120D98;
 
-extern OSMesgQueue D_8010B230;
+extern OSMesgQueue faultMsgQ;
 extern OSMesg D_80117720;
 
 extern u8 D_8011C860[];
@@ -21,9 +21,9 @@ void func_80025CB0(){
     osCreateThread(&D_8011A690, D_800D9D28[1].thread_id, D_800D9D28[1].entry, NULL, D_800D9D28[1].stackPtr, D_800D9D28[1].thread_priority);
     osStartThread(&D_8011A690);
 
-    osCreateMesgQueue(&D_8010B230, &D_80117720, 1);
+    osCreateMesgQueue(&faultMsgQ, &D_80117720, 1);
     
-    osCreateThread(&D_80120D98, THREAD_ID_20, func_80026490, NULL, D_8011C860, THREAD_PRIORITY_125);
+    osCreateThread(&D_80120D98, THREAD_ID_FAULT, faultproc, NULL, D_8011C860, THREAD_PRIORITY_FAULT);
     osStartThread(&D_80120D98);
 
     osSetThreadPri(NULL, 0);

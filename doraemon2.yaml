@@ -66,7 +66,7 @@ segments:
     subsegments:
       - [0x1050, asm, boot]
       - [0x10B0, c, idle]
-      - [0x11B0, asm]
+      - [0x11B0, c]
       - [0x1900, asm]
       - [0x2130, asm]
       - [0x2A90, asm]
@@ -353,10 +353,15 @@ segments:
       - [0xA88B0, asm]
       - [0xA8DE0, asm]
       - [0xA8EE0, data]
+      - [0xB51C0, .data, 11B0]
+      - [0xB55A0, data]
       - [0xC61F0, rodata]
+      - [0xC6210, .rodata, 11B0]
+      - [0xC69D8, rodata]
       - [0xC6A50, .rodata, 4F30]
       - [0xC6A80, rodata]
-      - { start: 0xCBE40, type: bss, vram: 0x800F0A40, name: CBE40 }
+      - { start: 0xCBE40, type: .bss, vram: 0x800F0A40, name: 11B0 }
+      - { start: 0xCBE40, type: bss, vram: 0x800F0A50, name: CBE450 }
       - { start: 0xCBE40, type: .bss, vram: 0x800F0A90, name: 4F30 }
       - { start: 0xCBE40, type: bss, vram: 0x800F0AA0, name: 800F0AA0 }
 
