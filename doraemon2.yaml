@@ -27,6 +27,7 @@ options:
   asm_jtbl_label_macro: jlabel
   asm_data_macro: dlabel
 
+
   # section_order: [".text", ".data", ".rodata", ".bss"]
   # auto_all_sections: [".data", ".rodata", ".bss"]
 
@@ -356,7 +357,7 @@ segments:
       - [0xB51C0, .data, 11B0]
       - [0xB55A0, data]
       - [0xC61F0, rodata]
-      - [0xC6210, .rodata, 11B0]
+      - [0xC6210, rodata, 11B0]
       - [0xC69D8, rodata]
       - [0xC6A50, .rodata, 4F30]
       - [0xC6A80, rodata]

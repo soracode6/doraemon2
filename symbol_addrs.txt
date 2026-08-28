@@ -16,6 +16,13 @@ func_80025E30 = 0x80025E30;
 printFaultData = 0x80025EA0;
 printRegister = 0x800263DC;
 faultproc = 0x80026490;
+func_80026500 = 0x80026500;
+drScdEvent = 0x80026700;
+osScAddClient = 0x80026858;
+osScRemoveClient = 0x800268BC;
+func_8002694C = 0x8002694C;
+func_80026B10 = 0x80026B10;
+func_80026B94 = 0x80026B94;
 
 causeDesc = 0x800D9DC0;
 srDesc = 0x800D9F10;
@@ -52,6 +59,18 @@ osGetCount = 0x800BE2B0;
 
 //
 
+// setintmask.s
+
+osSetIntMask = 0x800BE3D0;
+
+//
+
+// writebackdcacheall.s
+
+osWritebackDCacheAll = 0x800BE4F0;
+
+//
+
 // createmesgqueue.c
 
 osCreateMesgQueue = 0x800BE520;
@@ -64,9 +83,21 @@ osCreateThread = 0x800BE550;
 
 //
 
+// gettime.c
+
+osGetTime = 0x800BE620;
+
+//
+
 // recvmesg.c
 
 osRecvMesg = 0x800BE6B0;
+
+//
+
+// sendmesg.c
+
+osSendMesg = 0x800BE7E0;
 
 //
 
@@ -94,6 +125,43 @@ __osGetCurrFaultedThread = 0x800BEF00;
 
 //
 
+// sptask.c
+
+osSpTaskLoad = 0x800C3F50;
+osSpTaskStartGo = 0x800C415C;
+
+//
+
+// sptaskyield.c
+
+osSpTaskYield = 0x800C4190;
+
+//
+
+// sptaskyielded.c
+
+osSpTaskYielded = 0x800C41B0;
+
+//
+
+// visetevent.c
+
+osViSetEvent = 0x800C4280;
+
+//
+
+// visetmode.c
+
+osViSetMode = 0x800C42E0;
+
+//
+
+// viblack.c
+
+osViBlack = 0x800C4380;
+
+//
+
 // sprintf.c
 
 sprintf = 0x800C4EE0;
@@ -112,9 +180,27 @@ osCreatePiManager = 0x800C7280;
 
 //
 
+// vimgr.c
+
+osCreateViManager = 0x800C74C0;
+
+//
+
+// visetspecial.c
+
+osViSetSpecialFeatures = 0x800C7800;
+
+//
+
 // initialize.c
 
 osInitialize = 0x800C85F0;
+
+//
+
+// vitbl.c
+
+osViModeTable = 0x800E73C0;
 
 //
 

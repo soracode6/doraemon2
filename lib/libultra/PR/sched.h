@@ -84,6 +84,7 @@ typedef struct OSScTask_s {
 typedef struct SCClient_s {
     struct SCClient_s   *next;  /* next client in the list      */
     OSMesgQueue         *msgQ;  /* where to send the frame msg  */
+    u16 unk8; // mod
 } OSScClient;
 
 typedef struct {
@@ -107,8 +108,6 @@ typedef struct {
 
 void            osCreateScheduler(OSSched *s, void *stack, OSPri priority,
                                   u8 mode, u8 numFields);
-void            osScAddClient(OSSched *s, OSScClient *c, OSMesgQueue *msgQ);
-void            osScRemoveClient(OSSched *s, OSScClient *c);
 OSMesgQueue     *osScGetCmdQ(OSSched *s);
 
 #endif

@@ -14,7 +14,7 @@ extern u8 D_8011C860[];
 
 void func_80025CB0(){
     func_80025DB0();
-    D_8011C1C8_sets(2, 1, 90);
+    D_8011C1C0_sets(OS_VI_NTSC_LAN1, 1, OS_VI_GAMMA_OFF | OS_VI_GAMMA_DITHER_OFF | OS_VI_DIVOT_ON | OS_VI_DITHER_FILTER_ON);
     
     func_80026500(&idle_thread, &D_800D9D28);
     

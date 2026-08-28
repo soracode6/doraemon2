@@ -103,7 +103,6 @@ LD_FLAGS  += -Map $(ROM).map --no-check-sections
 $(BUILD_DIR)/src/libultra/os/%.o: OPT_FLAGS := -mips2 -O1
 $(BUILD_DIR)/src/libultra/libc/ll.o: OPT_FLAGS := -O1 -mips3 -32
 
-
 default: all
 
 all: verify
